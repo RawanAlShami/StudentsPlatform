@@ -1,0 +1,65 @@
+html, body
+{
+  height: 100%;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: #F1F1F1;
+}
+
+.signupForm
+{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+}
+
+.container
+{
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+h1,p
+{
+  margin-top: 0px;
+  text-align: center;
+}
+
+.ip
+{
+  width: 95%;
+  border: none;
+  padding: 15px;
+  background: #F1F1F1;
+  display: inline-block;
+  margin: 10px 0px 25px 0px;
+}
+
+button
+{
+  top:0px;
+  width: 40%;
+  border: none;
+  opacity: 0.9;
+  cursor: pointer;
+  margin-bottom:2%;
+  color: #FFFFFF;
+  margin-right: 10%;
+  border-radius:6px;
+  padding: 15px 20px;
+  background-color:  #000080;
+}
+
+button:hover
+{
+  opacity:1;
+}
+
+.cancel
+{
+  left:50px;
+  position:relative;
+}

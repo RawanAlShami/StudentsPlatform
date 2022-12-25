@@ -1,0 +1,65 @@
+html, body
+{
+    margin:0;
+    padding: 0;
+    height: 100%;
+}
+
+body
+{
+    display: grid;
+    font-size: 1rem;
+    align-items: center;
+    height: fit-content;
+    justify-content: center;
+}
+
+table
+{
+    width:700px;
+    margin-top: 15%;
+    text-align: left;
+    overflow: hidden;
+    border-collapse: collapse;
+    box-shadow: 0px 5px 10px #6f6fee;
+}
+
+thead
+{
+    width: 50%;
+    box-shadow: 0 1px 3px #e2e2ff;
+}
+
+th
+{
+    font-weight: 900;
+    font-size: 0.8rem;
+    padding: 1rem 2rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+td
+{
+    padding: 1rem 2rem;
+    border-bottom: 1px #eee solid;
+}
+
+button
+{
+    border:none;
+    width:100px;
+    height: 30px;
+    opacity: 0.9;
+    color: #FFFFFF;
+    margin-left: 50%;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #000080;
+}
+
+button:hover
+{
+    opacity:1;
+    cursor: pointer;
+}
