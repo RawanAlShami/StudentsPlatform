@@ -14,17 +14,17 @@ export class ViewCoursesComponent implements OnInit
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit() 
+  ngOnInit()
   {
-    let response = this.http.get("http://localhost:8080/courses");
+    let response = this.http.get("http://localhost:8081/courses");
     response.subscribe((data) => this.courses=data);
   }
 
   enrollInCourse(data: any): void
   {
     let loggedUsername=sessionStorage.getItem('loggedUsername');
-  
-    this.http.get("http://localhost:8080/student/"+loggedUsername).toPromise().then(data=>{
+
+    this.http.get("http://localhost:8081/student/"+loggedUsername).toPromise().then(data=>{
       this.student=data;
     });
 
@@ -34,7 +34,7 @@ export class ViewCoursesComponent implements OnInit
 
     let body={};
 
-    this.http.put('http://localhost:8080/' + data.courseID + '/students/' + studentID, body).subscribe(data => console.log(data));
+    this.http.put('http://localhost:8081/' + data.courseID + '/students/' + studentID, body).subscribe(data => console.log(data));
 
     alert("Successfully Enrolled")
   }

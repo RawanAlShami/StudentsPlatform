@@ -9,5 +9,3 @@ RUN npm run build --prod
 FROM nginx:1.17.1-alpine
 COPY --from=build /dist/src/app/dist/angular-frontend /usr/share/nginx/html
 COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
-
-CMD ["/bin/sh",  "-c",  "envsubst < /usr/share/nginx/html/assets/env.template.js > /usr/share/nginx/html/assets/env.js && exec nginx -g 'daemon off;'"]

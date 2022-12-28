@@ -7,20 +7,20 @@ import { Router } from '@angular/router';
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.css']
 })
-export class SigninComponent 
+export class SigninComponent
 {
   student:any;
   constructor(private http: HttpClient, private router: Router){}
 
   signin()
   {
-    let body = 
+    let body =
     {
       "username": (<HTMLInputElement>document.getElementById("usernamein")).value,
       "password": (<HTMLInputElement>document.getElementById("passwordin")).value
     };
 
-    this.http.put('http://localhost:8080/student/signIn', body).subscribe(data => console.log(data));
+    this.http.put('http://localhost:8081/student/signIn', body).subscribe(data => console.log(data));
     sessionStorage.setItem('loggedUsername', body.username);
 
     this.router.navigateByUrl('/landing');

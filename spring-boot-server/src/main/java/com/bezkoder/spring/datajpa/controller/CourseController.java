@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.bezkoder.spring.datajpa.repository.CourseRepository;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "*")
 public class CourseController
 {
     @Autowired

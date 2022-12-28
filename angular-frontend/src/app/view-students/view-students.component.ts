@@ -10,9 +10,9 @@ export class ViewStudentsComponent implements OnInit{
   students:any;
   constructor(private http: HttpClient) {}
 
-  ngOnInit() 
+  ngOnInit()
   {
-    let response = this.http.get("http://localhost:8080/students");
+    let response = this.http.get("http://localhost:8081/students");
     response.subscribe((data) => this.students=data);
   }
 }

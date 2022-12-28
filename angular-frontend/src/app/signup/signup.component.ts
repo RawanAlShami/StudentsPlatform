@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 
-export class SignupComponent 
+export class SignupComponent
 {
   constructor(private http: HttpClient, private router: Router){}
 
@@ -16,7 +16,7 @@ export class SignupComponent
   {
     let options = { headers: new HttpHeaders().set('Content-Type', 'application/json') };
 
-    let body = 
+    let body =
     {
       "username": (<HTMLInputElement>document.getElementById("username")).value,
       "password": (<HTMLInputElement>document.getElementById("password")).value
@@ -24,7 +24,7 @@ export class SignupComponent
 
     if(body.password==(<HTMLInputElement>document.getElementById("repeatPassword")).value)
     {
-      let response = this.http.post("http://localhost:8080/student/register", body).subscribe(data => console.log(data));
+      let response = this.http.post("http://localhost:8081/student/register", body).subscribe(data => console.log(data));
 
       alert("Account Created Successfully")
       this.router.navigateByUrl('/signin');
